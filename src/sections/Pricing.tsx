@@ -264,7 +264,7 @@ export const Pricing = () => {
     <section className="py-24 bg-white transition-colors duration-300">
       <div className="container">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900">Pricing</h2>
+          <h2 className="section-title ">Pricing</h2>
           <p className="mt-5 text-gray-600">
             Free forever. Upgrade for better ROI tracking, analytics, and growth tools.
           </p>
