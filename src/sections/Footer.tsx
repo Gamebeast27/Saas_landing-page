@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
       <div className="container">
         <div className="inline-flex relative ">
-          <Image src={logo} alt="AdmyBrand Logo" className="mt-2 w-40 md:w-48 lg:w-56 h-auto" />
+          <Image src={logo} alt="AdmyBrand Logo" className="mt-2 w-40 md:w-48 lg:w-56 h-auto" priority quality={75}/>
         </div>
         <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
           <a href="#">About</a>

@@ -31,7 +31,7 @@ export const ProductShowcase = () => {
           </p>
         </div>
         <div className="relative">
-          <Image src={productImage} alt="Product Image" className="mt-10" />
+          <Image src={productImage} alt="Product Image" className="mt-10" quality={75}/>
           <motion.img
             src={pyramidImage.src}
             alt="Pyramid Image"

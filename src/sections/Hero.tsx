@@ -8,9 +8,10 @@ import {
   motion,
   useScroll,
   useTransform,
-  useMotionValueEvent,
 } from "framer-motion";
 import { useRef } from "react";
+
+const MotionImage = motion(Image);
 
 export const Hero = () => {
   const heroRef = useRef(null);
@@ -22,7 +23,7 @@ export const Hero = () => {
 
   return (
     <section
-      id = "hero"
+      id="hero"
       ref={heroRef}
       className="pt-8 mt-24 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip"
     >
@@ -44,10 +45,14 @@ export const Hero = () => {
               </button>
             </div>
           </div>
+
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-            <motion.img
-              src={cogImage.src}
+            <MotionImage
+              src={cogImage}
               alt="Cog image"
+              width={400}
+              height={400}
+              priority
               className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
               animate={{
                 translateY: [-30, 30],
@@ -58,25 +63,27 @@ export const Hero = () => {
                 duration: 3,
                 ease: "easeInOut",
               }}
+              quality={75}
             />
-            <motion.img
-              src={cylinderImage.src}
+            <MotionImage
+              src={cylinderImage}
+              alt="Cylinder image"
               width={220}
               height={220}
-              alt="Cylinder image"
               className="hidden md:block -top-8 -left-32 md:absolute"
               style={{
                 translateY: translateY,
               }}
             />
-            <motion.img
-              src={noodleImage.src}
-              width={220}
+            <MotionImage
+              src={noodleImage}
               alt="Noodle image"
+              width={220}
+              height={220}
               className="hidden lg:block absolute top-[524px] left-[448px] rotate-[30deg]"
               style={{
-                rotate: 30,
-                translateY: translateY,
+              rotate: "30deg",
+              translateY: translateY,
               }}
             />
           </div>

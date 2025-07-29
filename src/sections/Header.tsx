@@ -18,18 +18,26 @@ export const Header = () => {
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
-            <Image src={Logo} alt="AdmyBrand Logo" className="mt-2 w-40 md:w-48 lg:w-56 h-auto" />
+            <Image src={Logo} alt="AdmyBrand Logo" className="mt-2 w-40 md:w-48 lg:w-56 h-auto" priority />
             <MenuIcon className="h-5 w-5 md:hidden" />
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
-              <a href="#">About</a>
-              <a href="#">Features</a>
-              <a href="#">Customers</a>
-              <a href="#">Updates</a>
-              <a href="#">Help</a>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex align-items justify-center tracking-tight">
+              {["About", "Features", "Customers", "Updates", "Help"].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="relative group transition-all duration-300 ease-in-out font-medium"
+                >
+                  <span className="group-hover:text-indigo-600 group-hover:font-semibold transition-colors duration-300">
+                    {item}
+                  </span>
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-600 transition-all duration-300 group-hover:w-full" />
+                </a>
+              ))}
+              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight hover:bg-indigo-600 transition-colors duration-300">
                 Get for free
               </button>
             </nav>
+
           </div>
         </div>
       </div>
