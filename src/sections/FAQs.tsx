@@ -48,7 +48,7 @@ export default function Faqs() {
     <section className="bg-white py-20 px-4 sm:px-6 lg:px-8" id="faqs">
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900">
-          Questions? We`&apos;`ve got <span className="text-primary">answers</span>
+          Questions? We&apos;ve got <span className="text-primary">answers</span>
         </h2>
         <p className="mt-4 text-lg text-gray-600">
           Here are some frequently asked questions about Layers.
