@@ -1,4 +1,4 @@
-# Frontend Tribe Light SaaS Landing Page Template
+# SaaS Landing Page
 
 A modern, responsive SaaS landing page template built with React. This template features smooth animations, clean design, and easy customization to kickstart your next SaaS project.
 
